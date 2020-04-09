@@ -1,0 +1,61 @@
+entity SportsFacility {
+	housingAssociationName String required,
+    type SportsFacilityType required
+}
+
+entity Memebers{
+	name String
+}
+
+entity ExtandadUser {
+	phoneNumber String
+}
+
+entity Region {
+	regionName String
+}
+
+entity Country {
+	countryName String
+}
+
+entity Location {
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String,
+    lat BigDecimal,
+    lng BigDecimal
+}
+
+relationship OneToOne {
+	Country{region} to Region,
+	Location{country} to Country,
+	SportsFacility{location} to Location
+}
+
+relationship ManyToOne {
+	Memebers{extandadUser} to ExtandadUser
+	Memebers{sportsFacility} to SportsFacility
+}
+
+enum SportsFacilityType {
+  GYM,
+  FOOTBALL_FIELD,
+  BASKETBALL_FIELD,
+  VOLLEYBALL_FIELD
+}
+
+
+// Set pagination options
+//paginate Inhabitant, HousingAssociation, News with infinite-scroll
+//paginate Conclusion with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl //except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
