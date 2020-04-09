@@ -1,0 +1,11 @@
+version: '2'
+services:
+  aktywnegliwice-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/AktywneGliwice/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=AktywneGliwice
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
