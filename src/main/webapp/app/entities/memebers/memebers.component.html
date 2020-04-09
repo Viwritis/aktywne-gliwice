@@ -1,0 +1,73 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="aktywneGliwiceApp.memebers.home.title">Memebers</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-memebers" [routerLink]="['/memebers/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="aktywneGliwiceApp.memebers.home.createLabel">
+            Create a new Memebers
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="memebers?.length === 0">
+        <span jhiTranslate="aktywneGliwiceApp.memebers.home.notFound">No memebers found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="memebers?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="aktywneGliwiceApp.memebers.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="aktywneGliwiceApp.memebers.extandadUser">Extandad User</span></th>
+                    <th scope="col" ><span jhiTranslate="aktywneGliwiceApp.memebers.sportsFacility">Sports Facility</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let memebers of memebers ;trackBy: trackId">
+                    <td><a [routerLink]="['/memebers', memebers.id, 'view']">{{ memebers.id }}</a></td>
+                    <td>{{ memebers.name }}</td>
+                    <td>
+                        <div *ngIf="memebers.extandadUser">
+                            <a [routerLink]="['/extandad-user', memebers.extandadUser?.id, 'view']" >{{ memebers.extandadUser?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="memebers.sportsFacility">
+                            <a [routerLink]="['/sports-facility', memebers.sportsFacility?.id, 'view']" >{{ memebers.sportsFacility?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/memebers', memebers.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/memebers', memebers.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(memebers)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

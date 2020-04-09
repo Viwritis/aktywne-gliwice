@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="memebers">
+            <h2><span jhiTranslate="aktywneGliwiceApp.memebers.detail.title">Memebers</span> {{ memebers.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="aktywneGliwiceApp.memebers.name">Name</span></dt>
+                <dd>
+                    <span>{{ memebers.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="aktywneGliwiceApp.memebers.extandadUser">Extandad User</span></dt>
+                <dd>
+                    <div *ngIf="memebers.extandadUser">
+                        <a [routerLink]="['/extandad-user', memebers.extandadUser?.id, 'view']">{{ memebers.extandadUser?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="aktywneGliwiceApp.memebers.sportsFacility">Sports Facility</span></dt>
+                <dd>
+                    <div *ngIf="memebers.sportsFacility">
+                        <a [routerLink]="['/sports-facility', memebers.sportsFacility?.id, 'view']">{{ memebers.sportsFacility?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/memebers', memebers.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

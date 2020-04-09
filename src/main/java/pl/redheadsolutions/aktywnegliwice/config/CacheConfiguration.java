@@ -43,6 +43,12 @@ public class CacheConfiguration {
             createCache(cm, pl.redheadsolutions.aktywnegliwice.domain.User.class.getName());
             createCache(cm, pl.redheadsolutions.aktywnegliwice.domain.Authority.class.getName());
             createCache(cm, pl.redheadsolutions.aktywnegliwice.domain.User.class.getName() + ".authorities");
+            createCache(cm, pl.redheadsolutions.aktywnegliwice.domain.SportsFacility.class.getName());
+            createCache(cm, pl.redheadsolutions.aktywnegliwice.domain.Memebers.class.getName());
+            createCache(cm, pl.redheadsolutions.aktywnegliwice.domain.ExtandadUser.class.getName());
+            createCache(cm, pl.redheadsolutions.aktywnegliwice.domain.Region.class.getName());
+            createCache(cm, pl.redheadsolutions.aktywnegliwice.domain.Country.class.getName());
+            createCache(cm, pl.redheadsolutions.aktywnegliwice.domain.Location.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

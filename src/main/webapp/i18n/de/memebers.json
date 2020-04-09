@@ -1,0 +1,24 @@
+{
+  "aktywneGliwiceApp": {
+    "memebers": {
+      "home": {
+        "title": "Memebers",
+        "createLabel": "Memebers erstellen",
+        "createOrEditLabel": "Memebers erstellen oder bearbeiten",
+        "notFound": "No Memebers found"
+      },
+      "created": "Memebers erstellt mit ID {{ param }}",
+      "updated": "Memebers aktualisiert mit ID {{ param }}",
+      "deleted": "Memebers gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Memebers {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Memebers"
+      },
+      "name": "Name",
+      "extandadUser": "Extandad User",
+      "sportsFacility": "Sports Facility"
+    }
+  }
+}

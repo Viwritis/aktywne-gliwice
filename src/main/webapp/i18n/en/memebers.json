@@ -1,0 +1,24 @@
+{
+  "aktywneGliwiceApp": {
+    "memebers": {
+      "home": {
+        "title": "Memebers",
+        "createLabel": "Create a new Memebers",
+        "createOrEditLabel": "Create or edit a Memebers",
+        "notFound": "No Memebers found"
+      },
+      "created": "A new Memebers is created with identifier {{ param }}",
+      "updated": "A Memebers is updated with identifier {{ param }}",
+      "deleted": "A Memebers is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Memebers {{ id }}?"
+      },
+      "detail": {
+        "title": "Memebers"
+      },
+      "name": "Name",
+      "extandadUser": "Extandad User",
+      "sportsFacility": "Sports Facility"
+    }
+  }
+}

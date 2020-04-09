@@ -1,0 +1,36 @@
+{
+    "name": "Memebers",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "extandadUser",
+            "otherEntityRelationshipName": "memebers",
+            "relationshipName": "extandadUser",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "sportsFacility",
+            "otherEntityRelationshipName": "memebers",
+            "relationshipName": "sportsFacility",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200409123800",
+    "entityTableName": "memebers",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

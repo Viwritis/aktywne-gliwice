@@ -1,0 +1,22 @@
+{
+  "aktywneGliwiceApp": {
+    "extandadUser": {
+      "home": {
+        "title": "Extandad User",
+        "createLabel": "Dodaj Extandad User",
+        "createOrEditLabel": "Dodaj lub edytuj: Extandad User",
+        "notFound": "No Extandad Users found"
+      },
+      "created": "Utworzono nowy obiekt typu Extandad User z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Extandad User z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Extandad User z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Extandad User {{ id }}?"
+      },
+      "detail": {
+        "title": "Extandad User"
+      },
+      "phoneNumber": "Phone Number"
+    }
+  }
+}

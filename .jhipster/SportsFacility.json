@@ -1,0 +1,41 @@
+{
+    "name": "SportsFacility",
+    "fields": [
+        {
+            "fieldName": "housingAssociationName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "SportsFacilityType",
+            "fieldValues": "GYM,FOOTBALL_FIELD,BASKETBALL_FIELD,VOLLEYBALL_FIELD",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "location",
+            "otherEntityRelationshipName": "sportsFacility",
+            "relationshipName": "location",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200409123700",
+    "entityTableName": "sports_facility",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
