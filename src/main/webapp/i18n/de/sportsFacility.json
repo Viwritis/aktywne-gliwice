@@ -1,0 +1,24 @@
+{
+  "aktywneGliwiceApp": {
+    "sportsFacility": {
+      "home": {
+        "title": "Sports Facilities",
+        "createLabel": "Sports Facility erstellen",
+        "createOrEditLabel": "Sports Facility erstellen oder bearbeiten",
+        "notFound": "No Sports Facilities found"
+      },
+      "created": "Sports Facility erstellt mit ID {{ param }}",
+      "updated": "Sports Facility aktualisiert mit ID {{ param }}",
+      "deleted": "Sports Facility gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Sports Facility {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Sports Facility"
+      },
+      "housingAssociationName": "Housing Association Name",
+      "type": "Type",
+      "location": "Location"
+    }
+  }
+}

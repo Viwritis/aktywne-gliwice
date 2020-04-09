@@ -1,0 +1,24 @@
+{
+  "aktywneGliwiceApp": {
+    "sportsFacility": {
+      "home": {
+        "title": "Sports Facility",
+        "createLabel": "Dodaj Sports Facility",
+        "createOrEditLabel": "Dodaj lub edytuj: Sports Facility",
+        "notFound": "No Sports Facilities found"
+      },
+      "created": "Utworzono nowy obiekt typu Sports Facility z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Sports Facility z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Sports Facility z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Sports Facility {{ id }}?"
+      },
+      "detail": {
+        "title": "Sports Facility"
+      },
+      "housingAssociationName": "Housing Association Name",
+      "type": "Type",
+      "location": "Location"
+    }
+  }
+}

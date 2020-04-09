@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-memebers-heading" jhiTranslate="aktywneGliwiceApp.memebers.home.createOrEditLabel">Create or edit a Memebers</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="aktywneGliwiceApp.memebers.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="aktywneGliwiceApp.memebers.extandadUser" for="field_extandadUser">Extandad User</label>
+                    <select class="form-control" id="field_extandadUser" name="extandadUser" formControlName="extandadUser">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="extandadUserOption.id === editForm.get('extandadUser')!.value?.id ? editForm.get('extandadUser')!.value : extandadUserOption" *ngFor="let extandadUserOption of extandadusers; trackBy: trackById">{{ extandadUserOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="aktywneGliwiceApp.memebers.sportsFacility" for="field_sportsFacility">Sports Facility</label>
+                    <select class="form-control" id="field_sportsFacility" name="sportsFacility" formControlName="sportsFacility">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="sportsFacilityOption.id === editForm.get('sportsFacility')!.value?.id ? editForm.get('sportsFacility')!.value : sportsFacilityOption" *ngFor="let sportsFacilityOption of sportsfacilities; trackBy: trackById">{{ sportsFacilityOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+{
+  "aktywneGliwiceApp": {
+    "memebers": {
+      "home": {
+        "title": "Memebers",
+        "createLabel": "Dodaj Memebers",
+        "createOrEditLabel": "Dodaj lub edytuj: Memebers",
+        "notFound": "No Memebers found"
+      },
+      "created": "Utworzono nowy obiekt typu Memebers z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Memebers z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Memebers z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Memebers {{ id }}?"
+      },
+      "detail": {
+        "title": "Memebers"
+      },
+      "name": "Name",
+      "extandadUser": "Extandad User",
+      "sportsFacility": "Sports Facility"
+    }
+  }
+}

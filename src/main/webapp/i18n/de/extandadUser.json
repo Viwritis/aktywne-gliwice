@@ -1,0 +1,22 @@
+{
+  "aktywneGliwiceApp": {
+    "extandadUser": {
+      "home": {
+        "title": "Extandad Users",
+        "createLabel": "Extandad User erstellen",
+        "createOrEditLabel": "Extandad User erstellen oder bearbeiten",
+        "notFound": "No Extandad Users found"
+      },
+      "created": "Extandad User erstellt mit ID {{ param }}",
+      "updated": "Extandad User aktualisiert mit ID {{ param }}",
+      "deleted": "Extandad User gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Extandad User {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Extandad User"
+      },
+      "phoneNumber": "Phone Number"
+    }
+  }
+}
